@@ -226,6 +226,7 @@ MonoBehaviour:
   interactionReach: 1.6
   ControlsManager: {fileID: 0}
   EmissiveColor: {r: 1.9056604, g: 1.5509019, b: 0.33259168, a: 0}
+  mainCamera: {fileID: 5825773412205556031}
 --- !u!1 &8513016547302021424
 GameObject:
   m_ObjectHideFlags: 0
