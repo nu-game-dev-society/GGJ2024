@@ -184,6 +184,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3008747427112298317, guid: bdfb92e006bc5ba4bbfe5d437f64d1d9, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 1281785049}
+    - target: {fileID: 3008747427112298317, guid: bdfb92e006bc5ba4bbfe5d437f64d1d9, type: 3}
       propertyPath: ControlsManager
       value: 
       objectReference: {fileID: 3611996054610628485}
@@ -322,6 +326,11 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!20 &1281785049 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 5825773412205556031, guid: 8fef56e9f844d6548be6b7434b15f498, type: 3}
+  m_PrefabInstance: {fileID: 8539776455924129621}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1359135654
 GameObject:
   m_ObjectHideFlags: 0

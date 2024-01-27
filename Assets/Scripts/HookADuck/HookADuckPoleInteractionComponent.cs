@@ -6,7 +6,7 @@ public class HookADuckPoleInteractionComponent : MonoBehaviour, IInteractable
 
     public void Interact(PlayerController interactor)
     {
-        
+        interactor.TryEquip(this.gameObject);
     }
 
     public string PopupText()
