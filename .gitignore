@@ -75,3 +75,6 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 # End of https://www.toptal.com/developers/gitignore/api/unity
+/.editorconfig
+ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json
+ProjectSettings/ShaderGraphSettings.asset
