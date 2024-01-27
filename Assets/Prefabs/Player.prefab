@@ -42,7 +42,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1437498517817381077}
   - component: {fileID: 5275686933819045215}
-  - component: {fileID: 1091755488441199004}
   - component: {fileID: 7445109402512214262}
   - component: {fileID: 8663783769796814333}
   - component: {fileID: 7823737051126523129}
@@ -83,23 +82,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 8
   mouseSensitivity: 0.1
-  controls: {fileID: 1091755488441199004}
+  controls: {fileID: 0}
   asFootsteps: {fileID: 8663783769796814333}
   stepSpeed: 0.3
   move: {x: 0, y: 0}
   look: {x: 0, y: 0}
---- !u!114 &1091755488441199004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7899449926912209674}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d263e297362d2a24693e348babbfb200, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!143 &7445109402512214262
 CharacterController:
   m_ObjectHideFlags: 0
@@ -238,7 +225,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   interactionReach: 1.6
-  ControlsManager: {fileID: 1091755488441199004}
+  ControlsManager: {fileID: 0}
   EmissiveColor: {r: 1.9056604, g: 1.5509019, b: 0.33259168, a: 0}
 --- !u!1 &8513016547302021424
 GameObject:
