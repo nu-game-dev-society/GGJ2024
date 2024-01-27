@@ -18,8 +18,6 @@ public class ComponentCache
                 this.componentsKeyedByType[component.GetType()].Add(component);
             }
         }
-
-        //this.componentsKeyedByType.Add(typeof(Transform), new List<Component> { gameObject.transform });
     }
 
     public T GetComponent<T>() where T : Component
