@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class HookADuckPoleInteractionComponent : MonoBehaviour, IInteractable
 {
+    public bool CanInteract(PlayerController interactor) => true;
+
     public void Interact(PlayerController interactor)
     {
         
@@ -11,6 +13,8 @@ public class HookADuckPoleInteractionComponent : MonoBehaviour, IInteractable
     {
         return "Play 'Hook A Duck'";
     }
+
+    public bool ShouldHighlight() => true;
 
     // Start is called before the first frame update
     void Start()
