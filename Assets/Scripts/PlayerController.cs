@@ -71,7 +71,7 @@ public class PlayerController : MonoBehaviour
 
     public bool TryEquip(GameObject objectToEquip)
     {
-        if (this.equippedObject == null)
+        if (this.equippedObject != null)
         {
             return false;
         }
