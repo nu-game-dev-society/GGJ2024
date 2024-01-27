@@ -1,5 +1,6 @@
 using Assets.Scripts.Helpers;
 using System.Collections;
+using UnityEditor.Sprites;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -25,8 +26,8 @@ public class CupGameManager : MonoBehaviour
     [SerializeField]
     private int ballPostion = 1;
 
-    [SerializeField]
     private bool started = false;
+    private bool picked = true;
     private int movesToMake = 0;
 
     void Start()
@@ -49,6 +50,7 @@ public class CupGameManager : MonoBehaviour
     }
     public IEnumerator SubmitAnswer(int answer)
     {
+        picked = true;
         RevealBall();
         yield return new WaitForSeconds(1.5f);
         if (ballPostion == answer)
@@ -60,6 +62,7 @@ public class CupGameManager : MonoBehaviour
             AnswerFailed?.Invoke();
         }
     }
+    public bool CanPick() => !picked && !started;
 
     [ContextMenu("Reveal")]
     private void RevealBall()
@@ -78,6 +81,7 @@ public class CupGameManager : MonoBehaviour
         if (movesToMake == 0)
         {
             started = false;
+            picked = false;
             ball.gameObject.SetActive(true);
             return;
         }

@@ -14,6 +14,7 @@ public class InteractionController : MonoBehaviour
     [ColorUsage(true, true)]
     public Color EmissiveColor;
 
+    [SerializeField]
     private Camera mainCamera;
     private bool use = false;
 
@@ -26,7 +27,7 @@ public class InteractionController : MonoBehaviour
         this.player = GetComponent<PlayerController>();
         ControlsManager.controls.Gameplay.Use.performed += Use;
         ControlsManager.controls.Gameplay.Use.canceled += Use;
-        mainCamera = Camera.main;
+        mainCamera ??= Camera.main;
     }
 
     public void Use(InputAction.CallbackContext ctx)
@@ -92,5 +93,9 @@ public class InteractionController : MonoBehaviour
         {
             m.DisableKeyword("_EMISSION");
         }
+    }
+    private void OnDisable()
+    {
+        currentInteractable = null;
     }
 }

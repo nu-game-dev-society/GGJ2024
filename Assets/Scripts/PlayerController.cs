@@ -4,7 +4,6 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 10f;
-    public float mouseSensitivity = 100f;
     float xRotation = 0f;
 
     CharacterController controller;
@@ -45,8 +44,8 @@ public class PlayerController : MonoBehaviour
     {
         GetInputs();
 
-        float mouseX = look.x * mouseSensitivity;
-        float mouseY = look.y * mouseSensitivity;
+        float mouseX = look.x;
+        float mouseY = look.y;
 
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);

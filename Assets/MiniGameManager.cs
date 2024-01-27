@@ -6,6 +6,8 @@ public class MiniGameManager : MonoBehaviour, IInteractable
     public string GameName;
     public UnityEvent StartGame = new();
 
+    public bool CanInteract(PlayerController interactor) => true;
+
     public void Interact(PlayerController interactor)
     {
         StartGame?.Invoke();
@@ -16,4 +18,5 @@ public class MiniGameManager : MonoBehaviour, IInteractable
         return GameName;
     }
 
+    public bool ShouldHighlight() => false;
 }

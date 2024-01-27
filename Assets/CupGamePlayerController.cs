@@ -1,18 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class CupGamePlayerController : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField]
+    ControlsManager controls;
+    Vector3 currentRotation;
     void Start()
     {
-        
+        currentRotation = transform.localRotation.eulerAngles;
     }
 
-    // Update is called once per frame
+    Vector2 look;
     void Update()
     {
-        
+        look = controls.GetLook();
+        currentRotation.z -= look.y;
+        currentRotation.z = Mathf.Clamp(currentRotation.z, -70f, 70f);
+        currentRotation.y += look.x;
+        currentRotation.y = Mathf.Clamp(currentRotation.y, -70f, 70f);
+
+
+        transform.localRotation = Quaternion.Euler(currentRotation);
     }
 }
