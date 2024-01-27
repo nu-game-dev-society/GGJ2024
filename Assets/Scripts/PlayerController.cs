@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Unity.VisualScripting;
+using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class PlayerController : MonoBehaviour
     private Vector2 move;
     [SerializeField]
     private Vector2 look;
+
+    private GameObject equippedObject = null;
 
     void Start()
     {
@@ -65,6 +68,18 @@ public class PlayerController : MonoBehaviour
             nextStepTime = Time.time + (stepSpeed);
         }
 
+    }
+
+    public bool TryEquip(GameObject objectToEquip)
+    {
+        if (this.equippedObject == null)
+        {
+            return false;
+        }
+
+        this.equippedObject = objectToEquip;
+        objectToEquip.transform.parent = this.gameObject.transform;
+        return true;
     }
 }
 
