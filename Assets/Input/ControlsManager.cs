@@ -23,8 +23,4 @@ public class ControlsManager : MonoBehaviour
     {
         return controls.Gameplay.Look.ReadValue<Vector2>();
     }
-    public bool GetJump()
-    {
-        return controls.Gameplay.Jump.ReadValue<bool>();
-    }
 }
