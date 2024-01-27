@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor.PackageManager.Requests;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.Splines;
 
@@ -20,15 +21,16 @@ public class BasketballController : MonoBehaviour
     [Header("Objects")]
     [SerializeField] BasketballUI basketballUI;
     [SerializeField] GameObject basketballCamera;
+    [SerializeField] ControlsManager controlsManager;
 
     [Header("Splines")]
     [SerializeField] SplineContainer splineLeft;
     [SerializeField] SplineContainer splineCenter;
     [SerializeField] SplineContainer splineRight;
 
-    // TODO Remove when gamemanager exists
-    [Header("Temp")]
-    [SerializeField] ControlsManager controlsManager;
+    [Header("Events")]
+    [SerializeField] UnityEvent onSuccess;
+    [SerializeField] UnityEvent onFailure;
 
     private SplineAnimate basketballSplineAnimate;
     private Rigidbody basketballRigidbody;
@@ -127,12 +129,14 @@ public class BasketballController : MonoBehaviour
         {
             basketballSplineAnimate.Container = splineCenter;
             Debug.Log("Success");
+            onSuccess.Invoke();
         }
         else
         {
             bool right = current < 0.5f;
-            Debug.Log("Failure!");
             basketballSplineAnimate.Container = right ? splineRight : splineLeft;
+            Debug.Log("Failure!");
+            onFailure.Invoke();
         }
 
         basketballSplineAnimate.Play();
