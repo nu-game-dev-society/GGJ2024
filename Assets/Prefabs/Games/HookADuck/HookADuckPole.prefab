@@ -219,6 +219,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6165165113320128636}
+  - component: {fileID: 6028674132130508374}
+  - component: {fileID: 6850643406619133327}
+  - component: {fileID: 7456650320367799608}
   m_Layer: 0
   m_Name: HookADuckPole
   m_TagString: Untagged
@@ -244,6 +247,57 @@ Transform:
   - {fileID: 6170594218421961641}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &6028674132130508374
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8803126466497861619}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.1, y: 0.1, z: 0.1}
+  m_Center: {x: -0.04, y: 0.69, z: 0}
+--- !u!114 &6850643406619133327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8803126466497861619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d2294892c0039a478fc9359acd93a15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layers:
+    serializedVersion: 2
+    m_Bits: 64
+  interactionReach: 0
+  ControlsManager: {fileID: 0}
+  EmissiveColor: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &7456650320367799608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8803126466497861619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4678eef21fbd28d4ea4fad9f57e19562, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8991431479673874102
 GameObject:
   m_ObjectHideFlags: 0
