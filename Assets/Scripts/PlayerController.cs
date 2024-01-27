@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine;
-using UnityEngine.InputSystem;
-using Random = UnityEngine.Random;
+﻿using UnityEngine;
 
 namespace Assets.Scripts
 {
@@ -14,11 +6,7 @@ namespace Assets.Scripts
     {
         public float moveSpeed = 10f;
         public float mouseSensitivity = 100f;
-        public float speedMultiplier = 1f;
-        public float sprintMultiplier = JOG_SPEED_MULTIPLIER;
-        public const float JOG_SPEED_MULTIPLIER = 1.1f;
         float xRotation = 0f;
-        public float healthRegen = 10;
 
         CharacterController controller;
         [SerializeField]
@@ -28,17 +16,12 @@ namespace Assets.Scripts
 
         [SerializeField]
         private AudioSource asFootsteps;
-        [SerializeField]
-        private AudioSource asPain;
         [SerializeField] private float stepSpeed = 0.3f;
         private float nextStepTime = 0f;
         [SerializeField]
         private Vector2 move;
         [SerializeField]
         private Vector2 look;
-        [SerializeField]
-        private float currentHealth = 100;
-        public float maxHealth = 100;
 
         void Start()
         {
@@ -48,11 +31,6 @@ namespace Assets.Scripts
 
             Cursor.lockState = CursorLockMode.Locked;
             xRotation = playerCamera.transform.localRotation.x;
-        }
-
-        public float GetHealth()
-        {
-            return currentHealth;
         }
 
         void GetInputs()
@@ -78,20 +56,16 @@ namespace Assets.Scripts
 
             Vector3 moveDirection = (transform.right * move.x) + (transform.forward * move.y) + Physics.gravity;
 
-            controller.Move(moveDirection * moveSpeed * speedMultiplier * Time.deltaTime);
+            controller.Move(moveDirection * moveSpeed * Time.deltaTime);
 
-            if (currentHealth < maxHealth)
-            {
-                currentHealth += healthRegen * Time.deltaTime;
-            }
 
             bool moving = controller.velocity.magnitude > 0.5f;
-            //if (moving && Time.time >= nextStepTime)
-            //{
-            //    asFootsteps.pitch = Random.Range(2f, 2.5f);
-            //    asFootsteps.Play();
-            //    nextStepTime = Time.time + (stepSpeed / speedMultiplier);
-            //}
+            if (moving && Time.time >= nextStepTime)
+            {
+                asFootsteps.pitch = Random.Range(2f, 2.5f);
+                asFootsteps.Play();
+                nextStepTime = Time.time + (stepSpeed);
+            }
 
         }
     }
