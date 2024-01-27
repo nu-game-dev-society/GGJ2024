@@ -1,4 +1,3 @@
-using System.Diagnostics;
 using UnityEngine;
 
 public class RotatorComponent : MonoBehaviour
@@ -16,6 +15,11 @@ public class RotatorComponent : MonoBehaviour
 
     void FixedUpdate()
     {
-        this.rotationRoot.Rotate(rotationAmount * Time.fixedDeltaTime);
+        this.rotationRoot.Rotate(this.rotationAmount * Time.fixedDeltaTime);
+    }
+
+    public void ApplyRotationFuzz(Vector3 fuzzAmount)
+    {
+        this.rotationAmount = Vector3.Scale(this.rotationAmount, fuzzAmount);
     }
 }
