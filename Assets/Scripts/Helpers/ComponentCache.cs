@@ -22,13 +22,12 @@ public class ComponentCache
 
     public T GetComponent<T>() where T : Component
     {
-        this.componentsKeyedByType.TryGetValue(typeof(T), out List<Component> components);
-        return components?.OfType<T>().FirstOrDefault();
+        return this.GetComponents<T>().FirstOrDefault();
     }
 
-    public IReadOnlyCollection<T> GetComponents<T>() where T : Component
+    public IEnumerable<T> GetComponents<T>() where T : Component
     {
-        this.componentsKeyedByType.TryGetValue(typeof(T), out List<Component> components);
-        return (components?.OfType<T>() ?? Enumerable.Empty<T>()).ToArray();
+        return this.componentsKeyedByType.GetValueOrDefault(typeof(T))?.OfType<T>()
+            ?? Enumerable.Empty<T>();
     }
 }

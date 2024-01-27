@@ -20,7 +20,6 @@ public class DuckComponent : MonoBehaviour
         }
         this.componentCache.GetComponents<RotatorComponent>().ElementAt(1).ApplyRotationFuzz(fuzzAmountVector);
 
-
         this.componentCache.GetComponent<BobComponent>().ApplyBobAmountFuzz(fuzzAmount);
         this.componentCache.GetComponent<BobComponent>().ApplyBobSpeedFuzz(fuzzAmount);
     }

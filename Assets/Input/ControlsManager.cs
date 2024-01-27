@@ -6,6 +6,7 @@ using UnityEngine.InputSystem.Controls;
 
 public class ControlsManager : MonoBehaviour
 {
+    public float mouseSensitivity = 0.1f;
     public Controls controls;
     // Start is called before the first frame update
     void Awake()
@@ -21,6 +22,6 @@ public class ControlsManager : MonoBehaviour
     }
     public Vector2 GetLook()
     {
-        return controls.Gameplay.Look.ReadValue<Vector2>();
+        return controls.Gameplay.Look.ReadValue<Vector2>() * mouseSensitivity;
     }
 }
