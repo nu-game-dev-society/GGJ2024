@@ -35,9 +35,10 @@ public class CupGameManager : MonoBehaviour
     }
 
     [ContextMenu("StartGame")]
-    public void TestStart() => StartCoroutine(StartGame(7));
+    public void TestStart() => StartCupGame(7);
+    public void StartCupGame(int moves) => StartCoroutine(StartGame(moves));
 
-    public IEnumerator StartGame(int moves)
+    private IEnumerator StartGame(int moves)
     {
         RevealBall();
         yield return new WaitForSeconds(2.0f);
