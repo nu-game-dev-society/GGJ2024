@@ -35,7 +35,7 @@ public class CupGameManager : MonoBehaviour
     }
 
     [ContextMenu("StartGame")]
-    public void TestStart() => StartCoroutine(StartGame(5));
+    public void TestStart() => StartCoroutine(StartGame(7));
 
     public IEnumerator StartGame(int moves)
     {
