@@ -29,7 +29,10 @@ public class InteractionController : MonoBehaviour
         ControlsManager.controls.Gameplay.Use.canceled += Use;
 
         if (mainCamera == null)
-            mainCamera = Camera.main != null ? Camera.main : throw new System.Exception("Missing Camera");
+        {
+            var c = Camera.main;
+            mainCamera = c != null ? c : throw new System.Exception("Missing HUD");
+        }
     }
 
     public void Use(InputAction.CallbackContext ctx)

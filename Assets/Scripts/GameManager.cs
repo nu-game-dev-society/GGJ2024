@@ -8,8 +8,11 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        if(HudManager == null)
-            HudManager = FindObjectOfType<HudManager>() ?? throw new System.Exception("Missing HUD");
+        if (HudManager == null)
+        {
+            var h = FindObjectOfType<HudManager>();
+            HudManager = h != null ? h : throw new System.Exception("Missing HUD");
+        }
     }
     public void ReceiveTickets(int tickets)
     {
@@ -18,7 +21,7 @@ public class GameManager : MonoBehaviour
         //play sound;
 
         HudManager.ReceiveTickets(tickets);
-        if(TicketCount <= 0)
+        if (TicketCount <= 0)
         {
             Debug.LogWarning("YOU ARE A LOSER");
         }
