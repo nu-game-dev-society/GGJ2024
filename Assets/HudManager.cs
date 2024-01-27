@@ -7,6 +7,9 @@ public class HudManager : MonoBehaviour
 {
     private InteractionController interactionController;
     public TextMeshProUGUI interactText;
+
+    public GameObject ticketGUI;
+    public TextMeshProUGUI ticketText;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,5 +20,11 @@ public class HudManager : MonoBehaviour
     void Update()
     {
         interactText.text = interactionController.currentInteractable?.PopupText() ?? "";
+    }
+
+    public void ReceiveTickets(int tickets)
+    {
+        ticketText.SetText(tickets < 0 ? $"You lost {Mathf.Abs(tickets)} tickets" : $"You won {tickets} tickets");
+        ticketGUI.SetActive(true);
     }
 }
