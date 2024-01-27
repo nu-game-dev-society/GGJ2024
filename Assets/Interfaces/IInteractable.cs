@@ -9,8 +9,8 @@ using UnityEngine;
 public interface IInteractable
 {
     void Interact(PlayerController interactor);
-    bool CanInteract(PlayerController interactor) => true;
-    bool ShouldHighlight() => false;
+    bool CanInteract(PlayerController interactor);
+    bool ShouldHighlight();
     string PopupText();
 }
 public static class InteractableExtensions

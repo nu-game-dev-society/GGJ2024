@@ -81,7 +81,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 8
-  mouseSensitivity: 0.1
   controls: {fileID: 0}
   asFootsteps: {fileID: 8663783769796814333}
   stepSpeed: 0.3
