@@ -5,7 +5,6 @@ public class DuckComponent : MonoBehaviour
 {
     private readonly ComponentCache componentCache = new ComponentCache();
 
-    // Start is called before the first frame update
     void Start()
     {
         this.componentCache.Populate(this.gameObject);
@@ -22,10 +21,5 @@ public class DuckComponent : MonoBehaviour
 
         this.componentCache.GetComponent<BobComponent>().ApplyBobAmountFuzz(fuzzAmount);
         this.componentCache.GetComponent<BobComponent>().ApplyBobSpeedFuzz(fuzzAmount);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
     }
 }

@@ -77,7 +77,7 @@ public class PlayerController : MonoBehaviour
         }
 
         this.equippedObject = objectToEquip;
-        objectToEquip.transform.parent = this.gameObject.transform;
+        objectToEquip.transform.parent = playerCamera.transform;
         return true;
     }
 }

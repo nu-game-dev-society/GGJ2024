@@ -2,11 +2,12 @@ using UnityEngine;
 
 public class HookADuckPoleInteractionComponent : MonoBehaviour, IInteractable
 {
-    public bool CanInteract(PlayerController interactor) => true;
+    public bool CanInteract(PlayerController interactor) => !this.isInteracting;
+    private bool isInteracting = false;
 
     public void Interact(PlayerController interactor)
     {
-        interactor.TryEquip(this.gameObject);
+        this.isInteracting = interactor.TryEquip(this.gameObject);
     }
 
     public string PopupText()
@@ -14,17 +15,5 @@ public class HookADuckPoleInteractionComponent : MonoBehaviour, IInteractable
         return "Play 'Hook A Duck'";
     }
 
-    public bool ShouldHighlight() => true;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public bool ShouldHighlight() => !this.isInteracting;
 }
