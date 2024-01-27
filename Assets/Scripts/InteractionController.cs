@@ -27,7 +27,9 @@ public class InteractionController : MonoBehaviour
         this.player = GetComponent<PlayerController>();
         ControlsManager.controls.Gameplay.Use.performed += Use;
         ControlsManager.controls.Gameplay.Use.canceled += Use;
-        mainCamera ??= Camera.main;
+
+        if (mainCamera == null)
+            mainCamera = Camera.main != null ? Camera.main : throw new System.Exception("Missing Camera");
     }
 
     public void Use(InputAction.CallbackContext ctx)
