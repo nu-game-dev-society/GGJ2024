@@ -1,0 +1,100 @@
+{
+	"material":
+	{
+		"name": "DeadBarkGround",
+		"shader": "gt_product",
+		"type": "material",
+		"tiling": 1,
+		"texturemaps":
+		{
+			"basecolor": 
+			{
+				"path": "Textures/DeadBarkGround_basecolor.png",
+				"maxsize": 2048,
+				"compression": "default",
+				"colorchannel": "rgb",
+				"colorspace": "srgb"
+			},
+			"roughness":
+			{
+				"path": "Textures/DeadBarkGround_roughness.png",
+				"maxsize": 2048,
+				"compression": "default",
+				"colorchannel": "rgb",
+				"colorspace": "srgb"
+			},
+			"metallic": 
+			{
+				"path": "Textures/DeadBarkGround_metallic.png",
+				"maxsize": 2048,
+				"compression": "default",
+				"colorchannel": "rgb",
+				"colorspace": "srgb"
+			},
+			"albedo": 
+			{
+				"path": "Textures/DeadBarkGround_albedo.png",
+				"maxsize": 2048,
+				"compression": "default",
+				"colorchannel": "rgb",
+				"colorspace": "srgb"
+			},
+			"specular":
+			{
+				"path": "Textures/DeadBarkGround_specular.png",
+				"maxsize": 2048,
+				"compression": "default",
+				"colorchannel": "rgb",
+				"colorspace": "srgb"
+			},
+			"glossiness":
+			{
+				"path": "Textures/DeadBarkGround_glossiness.png",
+				"maxsize": 2048,
+				"compression": "default",
+				"colorchannel": "rgb",
+				"colorspace": "srgb"
+			},
+			"normal":
+			{
+				"path": "Textures/DeadBarkGround_normal.png",
+				"maxsize": 2048,
+				"compression": "normal",
+				"colorchannel": "rgb",
+				"colorspace": "srgb"
+			},
+			"ambientocclusion":
+			{
+				"path": "Textures/DeadBarkGround_ambientocclusion.png",
+				"maxsize": 2048,
+				"compression": "default",
+				"colorchannel": "rgb",
+				"colorspace": "srgb"
+			},
+			"height":
+			{
+				"path": "Textures/DeadBarkGround_height.png",
+				"maxsize": 2048,
+				"compression": "default",
+				"colorchannel": "rgb",
+				"colorspace": "srgb"
+			},
+			"emissive":
+			{
+				"path": "Textures/DeadBarkGround_emissive.png",
+				"maxsize": 2048,
+				"compression": "default",
+				"colorchannel": "rgb",
+				"colorspace": "srgb"
+			},
+			"opacity":
+			{
+				"path": "Textures/DeadBarkGround_opacity.png",
+				"maxsize": 2048,
+				"compression": "default",
+				"colorchannel": "rgb",
+				"colorspace": "srgb"
+			}
+		}
+	}
+}
