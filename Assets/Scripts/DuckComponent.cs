@@ -1,38 +1,28 @@
-using System;
 using System.Linq;
-using System.Collections.Generic;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 public class DuckComponent : MonoBehaviour
 {
-    private readonly Dictionary<Type, List<Component>> componentsKeyedByType = new Dictionary<Type, List<Component>>();
+    private readonly ComponentCache componentCache = new ComponentCache();
 
     // Start is called before the first frame update
     void Start()
     {
-        foreach (var component in this.gameObject.GetComponents(typeof(Component)))
+        this.componentCache.Populate(this.gameObject);
+
+        float fuzzDelta = 0.25f;
+        float fuzzAmount = Random.Range(1 - fuzzDelta, 1 + fuzzDelta);
+
+        var fuzzAmountVector = Vector3.up * fuzzAmount;
+        if (new System.Random().NextDouble() >= 0.5)
         {
-            if (!this.componentsKeyedByType.TryAdd(component.GetType(), new List<Component> { component }))
-            {
-                this.componentsKeyedByType[component.GetType()].Add(component);
-            }
+            fuzzAmountVector *= -1f;
         }
+        this.componentCache.GetComponents<RotatorComponent>().ElementAt(1).ApplyRotationFuzz(fuzzAmountVector);
 
-        float fuzzAmount = 0.25f;
-        var fuzzAmountVector = Vector3.up * Random.Range(1 - fuzzAmount, 1 + fuzzAmount);
-        this.GetComponents<RotatorComponent>().ElementAt(1).ApplyRotationFuzz(fuzzAmountVector);
-    }
 
-    private new T GetComponent<T>() where T : Component
-    {
-        return GetComponents<T>().FirstOrDefault();
-    }
-
-    private new IReadOnlyCollection<T> GetComponents<T>() where T : Component
-    {
-        this.componentsKeyedByType.TryGetValue(typeof(T), out List<Component> components);
-        return (components?.OfType<T>() ?? Enumerable.Empty<T>()).ToArray();
+        this.componentCache.GetComponent<BobComponent>().ApplyBobAmountFuzz(fuzzAmount);
+        this.componentCache.GetComponent<BobComponent>().ApplyBobSpeedFuzz(fuzzAmount);
     }
 
     // Update is called once per frame
