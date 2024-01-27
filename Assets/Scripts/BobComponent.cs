@@ -14,7 +14,7 @@ public class BobComponent : MonoBehaviour
 
     void Start()
     {
-        
+        this.componentCache.Populate(this.gameObject);
     }
 
     void Update()

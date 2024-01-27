@@ -19,7 +19,7 @@ public class ComponentCache
             }
         }
 
-        this.componentsKeyedByType.Add(typeof(Transform), new List<Component> { gameObject.transform });
+        //this.componentsKeyedByType.Add(typeof(Transform), new List<Component> { gameObject.transform });
     }
 
     public T GetComponent<T>() where T : Component
