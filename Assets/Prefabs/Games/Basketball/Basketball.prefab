@@ -54,6 +54,7 @@ MonoBehaviour:
   accuracyRequired: 0.15
   speed: 3
   basketballUI: {fileID: 0}
+  camera: {fileID: 3526424547946795395}
   splineLeft: {fileID: 6587195723823897395}
   splineCenter: {fileID: 5388848918644736414}
   splineRight: {fileID: 926815586085015190}

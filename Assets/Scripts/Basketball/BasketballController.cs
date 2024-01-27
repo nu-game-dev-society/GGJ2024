@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor.PackageManager.Requests;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Splines;
@@ -13,8 +14,9 @@ public class BasketballController : MonoBehaviour
     [SerializeField] float accuracyRequired = 0.15f;
     [SerializeField] float speed = 1f;
 
-    [Header("UI")]
+    [Header("Objects")]
     [SerializeField] BasketballUI basketballUI;
+    [SerializeField] GameObject camera;
 
     [Header("Splines")]
     [SerializeField] SplineContainer splineLeft;
@@ -27,11 +29,41 @@ public class BasketballController : MonoBehaviour
 
     private SplineAnimate basketballSplineAnimate;
     private Rigidbody basketballRigidbody;
-    private bool throwing = false;
-    private bool waiting = false;
-    private float time = 0;
+    private bool throwing;
+    private bool waiting;
+    private float time;
 
     private float CurrentPct => (Mathf.Sin(time * speed) + 1) / 2;
+
+    private void OnEnable()
+    {
+        basketballUI.gameObject.SetActive(true);
+        camera.SetActive(true);
+
+        Reset();
+    }
+
+    private void OnDisable()
+    {
+        basketballUI.gameObject.SetActive(false);
+        camera.SetActive(false);
+
+        Reset();
+    }
+
+    private void Reset()
+    {
+        // Reset the time so we start from the center
+        time = 0;
+
+        // Reset other vars
+        throwing = false;
+        waiting = false;
+
+        // Reset ball
+        basketballRigidbody.isKinematic = true;
+        basketballSplineAnimate.Restart(false);
+    }
 
     // Start is called before the first frame update
     void Start()
