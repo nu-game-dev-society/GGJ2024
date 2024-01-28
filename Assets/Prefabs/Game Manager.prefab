@@ -59,3 +59,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HudManager: {fileID: 0}
+  ControlsManager: {fileID: 8337094605098192124}
+  PauseScreen: {fileID: 0}
+  PlayerController: {fileID: 0}

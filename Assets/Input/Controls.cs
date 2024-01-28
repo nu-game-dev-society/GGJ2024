@@ -80,6 +80,15 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""ae586e4a-71bc-42b9-877f-f201ccd85e3f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -247,6 +256,28 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""action"": ""Scroll"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2081f5a6-4805-4b46-b17f-ab826f4bc305"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3abfd322-1b7a-46bd-a14e-d6cd3b2c4156"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -261,6 +292,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         m_Gameplay_Use = m_Gameplay.FindAction("Use", throwIfNotFound: true);
         m_Gameplay_Shoot = m_Gameplay.FindAction("Shoot", throwIfNotFound: true);
         m_Gameplay_Scroll = m_Gameplay.FindAction("Scroll", throwIfNotFound: true);
+        m_Gameplay_Pause = m_Gameplay.FindAction("Pause", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -328,6 +360,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Gameplay_Use;
     private readonly InputAction m_Gameplay_Shoot;
     private readonly InputAction m_Gameplay_Scroll;
+    private readonly InputAction m_Gameplay_Pause;
     public struct GameplayActions
     {
         private @Controls m_Wrapper;
@@ -338,6 +371,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         public InputAction @Use => m_Wrapper.m_Gameplay_Use;
         public InputAction @Shoot => m_Wrapper.m_Gameplay_Shoot;
         public InputAction @Scroll => m_Wrapper.m_Gameplay_Scroll;
+        public InputAction @Pause => m_Wrapper.m_Gameplay_Pause;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -365,6 +399,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Scroll.started += instance.OnScroll;
             @Scroll.performed += instance.OnScroll;
             @Scroll.canceled += instance.OnScroll;
+            @Pause.started += instance.OnPause;
+            @Pause.performed += instance.OnPause;
+            @Pause.canceled += instance.OnPause;
         }
 
         private void UnregisterCallbacks(IGameplayActions instance)
@@ -387,6 +424,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Scroll.started -= instance.OnScroll;
             @Scroll.performed -= instance.OnScroll;
             @Scroll.canceled -= instance.OnScroll;
+            @Pause.started -= instance.OnPause;
+            @Pause.performed -= instance.OnPause;
+            @Pause.canceled -= instance.OnPause;
         }
 
         public void RemoveCallbacks(IGameplayActions instance)
@@ -412,5 +452,6 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         void OnUse(InputAction.CallbackContext context);
         void OnShoot(InputAction.CallbackContext context);
         void OnScroll(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
     }
 }
