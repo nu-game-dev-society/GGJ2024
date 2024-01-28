@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class DuckComponent : MonoBehaviour
 {
+    public HookADuckMiniGameManager duckMiniGameManager;
     public Transform duckTransform;
 
     private readonly ComponentCache componentCache = new ComponentCache();
@@ -27,7 +28,15 @@ public class DuckComponent : MonoBehaviour
 
     public void OnPickup(HookADuckPoleHookComponent hookComponent)
     {
-        this.duckTransform.parent = hookComponent.hookTransform;
+        var duckyboi = Instantiate(this.duckTransform.GetChild(0).gameObject);
+        this.duckTransform.gameObject.SetActive(false);
+
+        duckyboi.transform.parent = hookComponent.hookTransform;
+        duckyboi.transform.localPosition = Vector3.zero;
+        duckyboi.transform.localRotation = Quaternion.identity;
+
+        duckMiniGameManager.AcquireDuck(this);
+        Destroy(duckyboi,1.0f);
 
         this.componentCache.GetComponents<RotatorComponent>().ElementAt(0).enabled = false;
         this.componentCache.GetComponents<RotatorComponent>().ElementAt(1).enabled = false;

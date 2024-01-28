@@ -1,12 +1,15 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class HookADuckPoleInteractionComponent : MonoBehaviour, IInteractable
 {
+    public UnityEvent interactEvent = new UnityEvent(); 
     public bool CanInteract(PlayerController interactor) => !this.isInteracting;
-    private bool isInteracting = false;
+    public bool isInteracting = false;
 
     public void Interact(PlayerController interactor)
     {
+        interactEvent.Invoke();
         this.isInteracting = interactor.TryEquip(this.gameObject);
     }
 

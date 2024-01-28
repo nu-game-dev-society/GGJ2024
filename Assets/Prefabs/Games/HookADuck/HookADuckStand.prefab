@@ -1,5 +1,37 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4047923575213366243
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8182584501682300773}
+  m_Layer: 0
+  m_Name: PoleSocket
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8182584501682300773
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4047923575213366243}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.822, y: 0.414, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7007552568527396581}
+  m_Father: {fileID: 2952727061314120706}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5488267108109801484
 GameObject:
   m_ObjectHideFlags: 0
@@ -81,6 +113,103 @@ Transform:
   - {fileID: 6163821506725922350}
   m_Father: {fileID: 2952727061314120706}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7895015573955776352
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1570087096964987972}
+  - component: {fileID: 696901957312237177}
+  - component: {fileID: 999442593139245533}
+  - component: {fileID: 5892203529200797480}
+  m_Layer: 0
+  m_Name: HookADuckGameZone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1570087096964987972
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7895015573955776352}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2952727061314120706}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &696901957312237177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7895015573955776352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fde4983e0c34d6147a3b883f13dde830, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poleSocket: {fileID: 8182584501682300773}
+--- !u!136 &999442593139245533
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7895015573955776352}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 3
+  m_Height: 10
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.75, z: 0}
+--- !u!54 &5892203529200797480
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7895015573955776352}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &8458769791737190492
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,6 +219,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2952727061314120706}
+  - component: {fileID: 6461420742049909019}
   m_Layer: 0
   m_Name: HookADuckStand
   m_TagString: Untagged
@@ -112,9 +242,25 @@ Transform:
   m_Children:
   - {fileID: 347352937116964673}
   - {fileID: 8613505270989340776}
-  - {fileID: 7007552568527396581}
+  - {fileID: 1570087096964987972}
+  - {fileID: 8182584501682300773}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6461420742049909019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8458769791737190492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f10f7e08ea466e641a5be61d21ebc2f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  acquiredDuck:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &63173452122412460
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -167,6 +313,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6331420602947714571, guid: 0e482158910441145a479c3a11f9be18, type: 3}
+      propertyPath: duckMiniGameManager
+      value: 
+      objectReference: {fileID: 6461420742049909019}
     - target: {fileID: 6635305487418714835, guid: 0e482158910441145a479c3a11f9be18, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.935
@@ -237,6 +387,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6331420602947714571, guid: 0e482158910441145a479c3a11f9be18, type: 3}
+      propertyPath: duckMiniGameManager
+      value: 
+      objectReference: {fileID: 6461420742049909019}
     - target: {fileID: 6635305487418714835, guid: 0e482158910441145a479c3a11f9be18, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.822
@@ -307,6 +461,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6331420602947714571, guid: 0e482158910441145a479c3a11f9be18, type: 3}
+      propertyPath: duckMiniGameManager
+      value: 
+      objectReference: {fileID: 6461420742049909019}
     - target: {fileID: 6635305487418714835, guid: 0e482158910441145a479c3a11f9be18, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.845
@@ -377,6 +535,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6331420602947714571, guid: 0e482158910441145a479c3a11f9be18, type: 3}
+      propertyPath: duckMiniGameManager
+      value: 
+      objectReference: {fileID: 6461420742049909019}
     - target: {fileID: 6635305487418714835, guid: 0e482158910441145a479c3a11f9be18, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.584
@@ -447,6 +609,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6331420602947714571, guid: 0e482158910441145a479c3a11f9be18, type: 3}
+      propertyPath: duckMiniGameManager
+      value: 
+      objectReference: {fileID: 6461420742049909019}
     - target: {fileID: 6635305487418714835, guid: 0e482158910441145a479c3a11f9be18, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.2
@@ -513,6 +679,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6331420602947714571, guid: 0e482158910441145a479c3a11f9be18, type: 3}
+      propertyPath: duckMiniGameManager
+      value: 
+      objectReference: {fileID: 6461420742049909019}
     - target: {fileID: 6635305487418714835, guid: 0e482158910441145a479c3a11f9be18, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.793
@@ -583,6 +753,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6331420602947714571, guid: 0e482158910441145a479c3a11f9be18, type: 3}
+      propertyPath: duckMiniGameManager
+      value: 
+      objectReference: {fileID: 6461420742049909019}
     - target: {fileID: 6635305487418714835, guid: 0e482158910441145a479c3a11f9be18, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.267
@@ -653,6 +827,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6331420602947714571, guid: 0e482158910441145a479c3a11f9be18, type: 3}
+      propertyPath: duckMiniGameManager
+      value: 
+      objectReference: {fileID: 6461420742049909019}
     - target: {fileID: 6635305487418714835, guid: 0e482158910441145a479c3a11f9be18, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.871
@@ -723,6 +901,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6331420602947714571, guid: 0e482158910441145a479c3a11f9be18, type: 3}
+      propertyPath: duckMiniGameManager
+      value: 
+      objectReference: {fileID: 6461420742049909019}
     - target: {fileID: 6635305487418714835, guid: 0e482158910441145a479c3a11f9be18, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.334
@@ -793,6 +975,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6331420602947714571, guid: 0e482158910441145a479c3a11f9be18, type: 3}
+      propertyPath: duckMiniGameManager
+      value: 
+      objectReference: {fileID: 6461420742049909019}
     - target: {fileID: 6635305487418714835, guid: 0e482158910441145a479c3a11f9be18, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.89
@@ -863,6 +1049,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6331420602947714571, guid: 0e482158910441145a479c3a11f9be18, type: 3}
+      propertyPath: duckMiniGameManager
+      value: 
+      objectReference: {fileID: 6461420742049909019}
     - target: {fileID: 6635305487418714835, guid: 0e482158910441145a479c3a11f9be18, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.22
@@ -933,6 +1123,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6331420602947714571, guid: 0e482158910441145a479c3a11f9be18, type: 3}
+      propertyPath: duckMiniGameManager
+      value: 
+      objectReference: {fileID: 6461420742049909019}
     - target: {fileID: 6635305487418714835, guid: 0e482158910441145a479c3a11f9be18, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.517
@@ -1003,6 +1197,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6331420602947714571, guid: 0e482158910441145a479c3a11f9be18, type: 3}
+      propertyPath: duckMiniGameManager
+      value: 
+      objectReference: {fileID: 6461420742049909019}
     - target: {fileID: 6635305487418714835, guid: 0e482158910441145a479c3a11f9be18, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.049
@@ -1073,6 +1271,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6331420602947714571, guid: 0e482158910441145a479c3a11f9be18, type: 3}
+      propertyPath: duckMiniGameManager
+      value: 
+      objectReference: {fileID: 6461420742049909019}
     - target: {fileID: 6635305487418714835, guid: 0e482158910441145a479c3a11f9be18, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.959
@@ -1143,6 +1345,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6331420602947714571, guid: 0e482158910441145a479c3a11f9be18, type: 3}
+      propertyPath: duckMiniGameManager
+      value: 
+      objectReference: {fileID: 6461420742049909019}
     - target: {fileID: 6635305487418714835, guid: 0e482158910441145a479c3a11f9be18, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.484
@@ -1213,6 +1419,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6331420602947714571, guid: 0e482158910441145a479c3a11f9be18, type: 3}
+      propertyPath: duckMiniGameManager
+      value: 
+      objectReference: {fileID: 6461420742049909019}
     - target: {fileID: 6635305487418714835, guid: 0e482158910441145a479c3a11f9be18, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.563
@@ -1283,6 +1493,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6331420602947714571, guid: 0e482158910441145a479c3a11f9be18, type: 3}
+      propertyPath: duckMiniGameManager
+      value: 
+      objectReference: {fileID: 6461420742049909019}
     - target: {fileID: 6635305487418714835, guid: 0e482158910441145a479c3a11f9be18, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.207
@@ -1353,6 +1567,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6331420602947714571, guid: 0e482158910441145a479c3a11f9be18, type: 3}
+      propertyPath: duckMiniGameManager
+      value: 
+      objectReference: {fileID: 6461420742049909019}
     - target: {fileID: 6635305487418714835, guid: 0e482158910441145a479c3a11f9be18, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.189
@@ -1423,6 +1641,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6331420602947714571, guid: 0e482158910441145a479c3a11f9be18, type: 3}
+      propertyPath: duckMiniGameManager
+      value: 
+      objectReference: {fileID: 6461420742049909019}
     - target: {fileID: 6635305487418714835, guid: 0e482158910441145a479c3a11f9be18, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.14
@@ -1447,15 +1669,15 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 2952727061314120706}
+    m_TransformParent: {fileID: 8182584501682300773}
     m_Modifications:
     - target: {fileID: 6165165113320128636, guid: 1093d1b08a04ae141b8d24c1ac386d28, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.822
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6165165113320128636, guid: 1093d1b08a04ae141b8d24c1ac386d28, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.414
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6165165113320128636, guid: 1093d1b08a04ae141b8d24c1ac386d28, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1555,6 +1777,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6331420602947714571, guid: 0e482158910441145a479c3a11f9be18, type: 3}
+      propertyPath: duckMiniGameManager
+      value: 
+      objectReference: {fileID: 6461420742049909019}
     - target: {fileID: 6635305487418714835, guid: 0e482158910441145a479c3a11f9be18, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.331
@@ -1625,6 +1851,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6331420602947714571, guid: 0e482158910441145a479c3a11f9be18, type: 3}
+      propertyPath: duckMiniGameManager
+      value: 
+      objectReference: {fileID: 6461420742049909019}
     - target: {fileID: 6635305487418714835, guid: 0e482158910441145a479c3a11f9be18, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.578
@@ -1695,6 +1925,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6331420602947714571, guid: 0e482158910441145a479c3a11f9be18, type: 3}
+      propertyPath: duckMiniGameManager
+      value: 
+      objectReference: {fileID: 6461420742049909019}
     - target: {fileID: 6635305487418714835, guid: 0e482158910441145a479c3a11f9be18, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.116
@@ -1765,6 +1999,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6331420602947714571, guid: 0e482158910441145a479c3a11f9be18, type: 3}
+      propertyPath: duckMiniGameManager
+      value: 
+      objectReference: {fileID: 6461420742049909019}
     - target: {fileID: 6635305487418714835, guid: 0e482158910441145a479c3a11f9be18, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.056
@@ -1835,6 +2073,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6331420602947714571, guid: 0e482158910441145a479c3a11f9be18, type: 3}
+      propertyPath: duckMiniGameManager
+      value: 
+      objectReference: {fileID: 6461420742049909019}
     - target: {fileID: 6635305487418714835, guid: 0e482158910441145a479c3a11f9be18, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.262
@@ -1905,6 +2147,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6331420602947714571, guid: 0e482158910441145a479c3a11f9be18, type: 3}
+      propertyPath: duckMiniGameManager
+      value: 
+      objectReference: {fileID: 6461420742049909019}
     - target: {fileID: 6635305487418714835, guid: 0e482158910441145a479c3a11f9be18, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.576
@@ -1975,6 +2221,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6331420602947714571, guid: 0e482158910441145a479c3a11f9be18, type: 3}
+      propertyPath: duckMiniGameManager
+      value: 
+      objectReference: {fileID: 6461420742049909019}
     - target: {fileID: 6635305487418714835, guid: 0e482158910441145a479c3a11f9be18, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.75
@@ -2045,6 +2295,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6331420602947714571, guid: 0e482158910441145a479c3a11f9be18, type: 3}
+      propertyPath: duckMiniGameManager
+      value: 
+      objectReference: {fileID: 6461420742049909019}
     - target: {fileID: 6635305487418714835, guid: 0e482158910441145a479c3a11f9be18, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.966
@@ -2115,6 +2369,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6331420602947714571, guid: 0e482158910441145a479c3a11f9be18, type: 3}
+      propertyPath: duckMiniGameManager
+      value: 
+      objectReference: {fileID: 6461420742049909019}
     - target: {fileID: 6635305487418714835, guid: 0e482158910441145a479c3a11f9be18, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.573
@@ -2185,6 +2443,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6331420602947714571, guid: 0e482158910441145a479c3a11f9be18, type: 3}
+      propertyPath: duckMiniGameManager
+      value: 
+      objectReference: {fileID: 6461420742049909019}
     - target: {fileID: 6635305487418714835, guid: 0e482158910441145a479c3a11f9be18, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.654
@@ -2255,6 +2517,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6331420602947714571, guid: 0e482158910441145a479c3a11f9be18, type: 3}
+      propertyPath: duckMiniGameManager
+      value: 
+      objectReference: {fileID: 6461420742049909019}
     - target: {fileID: 6635305487418714835, guid: 0e482158910441145a479c3a11f9be18, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.189
@@ -2325,6 +2591,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6331420602947714571, guid: 0e482158910441145a479c3a11f9be18, type: 3}
+      propertyPath: duckMiniGameManager
+      value: 
+      objectReference: {fileID: 6461420742049909019}
     - target: {fileID: 6635305487418714835, guid: 0e482158910441145a479c3a11f9be18, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.434
@@ -2395,6 +2665,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6331420602947714571, guid: 0e482158910441145a479c3a11f9be18, type: 3}
+      propertyPath: duckMiniGameManager
+      value: 
+      objectReference: {fileID: 6461420742049909019}
     - target: {fileID: 6635305487418714835, guid: 0e482158910441145a479c3a11f9be18, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.469
@@ -2465,6 +2739,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6331420602947714571, guid: 0e482158910441145a479c3a11f9be18, type: 3}
+      propertyPath: duckMiniGameManager
+      value: 
+      objectReference: {fileID: 6461420742049909019}
     - target: {fileID: 6635305487418714835, guid: 0e482158910441145a479c3a11f9be18, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.892
@@ -2535,6 +2813,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6331420602947714571, guid: 0e482158910441145a479c3a11f9be18, type: 3}
+      propertyPath: duckMiniGameManager
+      value: 
+      objectReference: {fileID: 6461420742049909019}
     - target: {fileID: 6635305487418714835, guid: 0e482158910441145a479c3a11f9be18, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.049
@@ -2605,6 +2887,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6331420602947714571, guid: 0e482158910441145a479c3a11f9be18, type: 3}
+      propertyPath: duckMiniGameManager
+      value: 
+      objectReference: {fileID: 6461420742049909019}
     - target: {fileID: 6635305487418714835, guid: 0e482158910441145a479c3a11f9be18, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.9
@@ -2675,6 +2961,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6331420602947714571, guid: 0e482158910441145a479c3a11f9be18, type: 3}
+      propertyPath: duckMiniGameManager
+      value: 
+      objectReference: {fileID: 6461420742049909019}
     - target: {fileID: 6635305487418714835, guid: 0e482158910441145a479c3a11f9be18, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.145
@@ -2745,6 +3035,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6331420602947714571, guid: 0e482158910441145a479c3a11f9be18, type: 3}
+      propertyPath: duckMiniGameManager
+      value: 
+      objectReference: {fileID: 6461420742049909019}
     - target: {fileID: 6635305487418714835, guid: 0e482158910441145a479c3a11f9be18, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.133
@@ -2815,6 +3109,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6331420602947714571, guid: 0e482158910441145a479c3a11f9be18, type: 3}
+      propertyPath: duckMiniGameManager
+      value: 
+      objectReference: {fileID: 6461420742049909019}
     - target: {fileID: 6635305487418714835, guid: 0e482158910441145a479c3a11f9be18, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.185
@@ -2885,6 +3183,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6331420602947714571, guid: 0e482158910441145a479c3a11f9be18, type: 3}
+      propertyPath: duckMiniGameManager
+      value: 
+      objectReference: {fileID: 6461420742049909019}
     - target: {fileID: 6635305487418714835, guid: 0e482158910441145a479c3a11f9be18, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.64
@@ -2955,6 +3257,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6331420602947714571, guid: 0e482158910441145a479c3a11f9be18, type: 3}
+      propertyPath: duckMiniGameManager
+      value: 
+      objectReference: {fileID: 6461420742049909019}
     - target: {fileID: 6635305487418714835, guid: 0e482158910441145a479c3a11f9be18, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.68
@@ -3025,6 +3331,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6331420602947714571, guid: 0e482158910441145a479c3a11f9be18, type: 3}
+      propertyPath: duckMiniGameManager
+      value: 
+      objectReference: {fileID: 6461420742049909019}
     - target: {fileID: 6635305487418714835, guid: 0e482158910441145a479c3a11f9be18, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.83
@@ -3095,6 +3405,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6331420602947714571, guid: 0e482158910441145a479c3a11f9be18, type: 3}
+      propertyPath: duckMiniGameManager
+      value: 
+      objectReference: {fileID: 6461420742049909019}
     - target: {fileID: 6635305487418714835, guid: 0e482158910441145a479c3a11f9be18, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.482
@@ -3165,6 +3479,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6331420602947714571, guid: 0e482158910441145a479c3a11f9be18, type: 3}
+      propertyPath: duckMiniGameManager
+      value: 
+      objectReference: {fileID: 6461420742049909019}
     - target: {fileID: 6635305487418714835, guid: 0e482158910441145a479c3a11f9be18, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.018
@@ -3235,6 +3553,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6331420602947714571, guid: 0e482158910441145a479c3a11f9be18, type: 3}
+      propertyPath: duckMiniGameManager
+      value: 
+      objectReference: {fileID: 6461420742049909019}
     - target: {fileID: 6635305487418714835, guid: 0e482158910441145a479c3a11f9be18, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.806
@@ -3305,6 +3627,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6331420602947714571, guid: 0e482158910441145a479c3a11f9be18, type: 3}
+      propertyPath: duckMiniGameManager
+      value: 
+      objectReference: {fileID: 6461420742049909019}
     - target: {fileID: 6635305487418714835, guid: 0e482158910441145a479c3a11f9be18, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.269
@@ -3375,6 +3701,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6331420602947714571, guid: 0e482158910441145a479c3a11f9be18, type: 3}
+      propertyPath: duckMiniGameManager
+      value: 
+      objectReference: {fileID: 6461420742049909019}
     - target: {fileID: 6635305487418714835, guid: 0e482158910441145a479c3a11f9be18, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.614
@@ -3445,6 +3775,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6331420602947714571, guid: 0e482158910441145a479c3a11f9be18, type: 3}
+      propertyPath: duckMiniGameManager
+      value: 
+      objectReference: {fileID: 6461420742049909019}
     - target: {fileID: 6635305487418714835, guid: 0e482158910441145a479c3a11f9be18, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.334
@@ -3515,6 +3849,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6331420602947714571, guid: 0e482158910441145a479c3a11f9be18, type: 3}
+      propertyPath: duckMiniGameManager
+      value: 
+      objectReference: {fileID: 6461420742049909019}
     - target: {fileID: 6635305487418714835, guid: 0e482158910441145a479c3a11f9be18, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.102
@@ -3585,6 +3923,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6331420602947714571, guid: 0e482158910441145a479c3a11f9be18, type: 3}
+      propertyPath: duckMiniGameManager
+      value: 
+      objectReference: {fileID: 6461420742049909019}
     - target: {fileID: 6635305487418714835, guid: 0e482158910441145a479c3a11f9be18, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.225
@@ -3655,6 +3997,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6331420602947714571, guid: 0e482158910441145a479c3a11f9be18, type: 3}
+      propertyPath: duckMiniGameManager
+      value: 
+      objectReference: {fileID: 6461420742049909019}
     - target: {fileID: 6635305487418714835, guid: 0e482158910441145a479c3a11f9be18, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.186

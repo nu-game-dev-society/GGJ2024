@@ -10723,6 +10723,127 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0003882437, y: 0.012155145, z: 0.007417703}
   m_Center: {x: -4.292815e-10, y: -0.00012207098, z: -0.002205582}
+--- !u!1001 &2016203926
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2952727061314120706, guid: bdfb92e006bc5ba4bbfe5d437f64d1d9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.5315466
+      objectReference: {fileID: 0}
+    - target: {fileID: 2952727061314120706, guid: bdfb92e006bc5ba4bbfe5d437f64d1d9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2952727061314120706, guid: bdfb92e006bc5ba4bbfe5d437f64d1d9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.063605
+      objectReference: {fileID: 0}
+    - target: {fileID: 2952727061314120706, guid: bdfb92e006bc5ba4bbfe5d437f64d1d9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.4359483
+      objectReference: {fileID: 0}
+    - target: {fileID: 2952727061314120706, guid: bdfb92e006bc5ba4bbfe5d437f64d1d9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2952727061314120706, guid: bdfb92e006bc5ba4bbfe5d437f64d1d9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.8999717
+      objectReference: {fileID: 0}
+    - target: {fileID: 2952727061314120706, guid: bdfb92e006bc5ba4bbfe5d437f64d1d9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2952727061314120706, guid: bdfb92e006bc5ba4bbfe5d437f64d1d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2952727061314120706, guid: bdfb92e006bc5ba4bbfe5d437f64d1d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 128.309
+      objectReference: {fileID: 0}
+    - target: {fileID: 2952727061314120706, guid: bdfb92e006bc5ba4bbfe5d437f64d1d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6038083668368626593, guid: bdfb92e006bc5ba4bbfe5d437f64d1d9, type: 3}
+      propertyPath: interactEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6038083668368626593, guid: bdfb92e006bc5ba4bbfe5d437f64d1d9, type: 3}
+      propertyPath: interactEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6038083668368626593, guid: bdfb92e006bc5ba4bbfe5d437f64d1d9, type: 3}
+      propertyPath: interactEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 817195285}
+    - target: {fileID: 6038083668368626593, guid: bdfb92e006bc5ba4bbfe5d437f64d1d9, type: 3}
+      propertyPath: interactEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6038083668368626593, guid: bdfb92e006bc5ba4bbfe5d437f64d1d9, type: 3}
+      propertyPath: interactEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ReceiveTickets
+      objectReference: {fileID: 0}
+    - target: {fileID: 6038083668368626593, guid: bdfb92e006bc5ba4bbfe5d437f64d1d9, type: 3}
+      propertyPath: interactEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6038083668368626593, guid: bdfb92e006bc5ba4bbfe5d437f64d1d9, type: 3}
+      propertyPath: interactEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6038083668368626593, guid: bdfb92e006bc5ba4bbfe5d437f64d1d9, type: 3}
+      propertyPath: interactEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6461420742049909019, guid: bdfb92e006bc5ba4bbfe5d437f64d1d9, type: 3}
+      propertyPath: acquiredDuck.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6461420742049909019, guid: bdfb92e006bc5ba4bbfe5d437f64d1d9, type: 3}
+      propertyPath: acquiredDuck.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6461420742049909019, guid: bdfb92e006bc5ba4bbfe5d437f64d1d9, type: 3}
+      propertyPath: acquiredDuck.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 817195285}
+    - target: {fileID: 6461420742049909019, guid: bdfb92e006bc5ba4bbfe5d437f64d1d9, type: 3}
+      propertyPath: acquiredDuck.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6461420742049909019, guid: bdfb92e006bc5ba4bbfe5d437f64d1d9, type: 3}
+      propertyPath: acquiredDuck.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ReceiveTickets
+      objectReference: {fileID: 0}
+    - target: {fileID: 6461420742049909019, guid: bdfb92e006bc5ba4bbfe5d437f64d1d9, type: 3}
+      propertyPath: acquiredDuck.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6461420742049909019, guid: bdfb92e006bc5ba4bbfe5d437f64d1d9, type: 3}
+      propertyPath: acquiredDuck.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6461420742049909019, guid: bdfb92e006bc5ba4bbfe5d437f64d1d9, type: 3}
+      propertyPath: acquiredDuck.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8458769791737190492, guid: bdfb92e006bc5ba4bbfe5d437f64d1d9, type: 3}
+      propertyPath: m_Name
+      value: HookADuckStand
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bdfb92e006bc5ba4bbfe5d437f64d1d9, type: 3}
 --- !u!1001 &2018616313
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12158,3 +12279,4 @@ SceneRoots:
   - {fileID: 663784099}
   - {fileID: 1257816040}
   - {fileID: 1255325339}
+  - {fileID: 2016203926}

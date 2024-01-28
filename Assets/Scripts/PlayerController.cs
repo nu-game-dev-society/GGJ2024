@@ -106,5 +106,15 @@ public class PlayerController : MonoBehaviour
         objectToEquip.transform.localRotation = Quaternion.Euler(Vector3.zero);
         return true;
     }
+
+    public void UnEquip()
+    {
+        if (this.equippedObject.GetComponent<HookADuckPoleInteractionComponent>() is HookADuckPoleInteractionComponent interactionComponent)
+        {
+            interactionComponent.isInteracting = false;
+        }
+
+        this.equippedObject = null;
+    }
 }
 

@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class HookADuckPoleHookComponent : MonoBehaviour
 {
+    public Transform parentPoleTransform;
     public Transform hookTransform;
 
     [SerializeField]
@@ -64,6 +65,6 @@ public class HookADuckPoleHookComponent : MonoBehaviour
     private void AcquireTarget(HookADuckDuckHookComponent targetToAcquire)
     {
         Debug.Log($"Acquired {targetToAcquire.gameObject.name}");
-        targetToAcquire.gameObject.GetComponentInParent<DuckComponent>().OnPickup(this);
+        targetToAcquire.gameObject.GetComponentInParent<DuckComponent>()?.OnPickup(this);
     }
 }
