@@ -51,6 +51,11 @@ public class CupGameManager : MonoBehaviour
     public IEnumerator SubmitAnswer(int answer)
     {
         picked = true;
+        if(answer != ballPostion)
+        {
+            RevealBall(answer);
+            yield return new WaitForSeconds(1.5f);
+        }
         RevealBall();
         yield return new WaitForSeconds(1.5f);
         if (ballPostion == answer)
@@ -65,10 +70,11 @@ public class CupGameManager : MonoBehaviour
     public bool CanPick() => !picked && !started;
 
     [ContextMenu("Reveal")]
-    private void RevealBall()
+    private void RevealBall(int? choice = null)
     {
         anim.speed = 1.0f;
-        anim.Play("RevealBall" + ballPostion, 0);
+        choice ??= ballPostion;
+        anim.Play("RevealBall" + choice, 0);
     }
 
     private CupAnim currentAnim;
