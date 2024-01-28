@@ -22,7 +22,7 @@ public class MenuHelper : MonoBehaviour
     {
         Debug.Log(SceneManager.GetActiveScene().name);
         bool shouldChangeScene = SceneManager.GetActiveScene().name != "Game";
-        if (shouldChangeScene)
+        if (gameManager.gameIsOver || shouldChangeScene)
             SceneManager.LoadScene("Game");
         else
             gameManager.Resume();

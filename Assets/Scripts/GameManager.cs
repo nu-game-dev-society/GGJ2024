@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
@@ -10,6 +11,9 @@ public class GameManager : MonoBehaviour
     public GameObject PauseScreen;
     public PlayerController PlayerController;
     private AudioSource Audio;
+    public UnityEvent gameOver;
+
+    public bool gameIsOver = false;
 
     [SerializeField]
     private AudioClip[] clownLaughs;
@@ -63,7 +67,10 @@ public class GameManager : MonoBehaviour
         HudManager.DisplayTickets(TicketCount);
         if (TicketCount <= 0)
         {
-            Debug.LogWarning("YOU ARE A LOSER");
+            gameIsOver = true;
+            gameOver.Invoke();
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 
