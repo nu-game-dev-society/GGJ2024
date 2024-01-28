@@ -166,9 +166,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4678eef21fbd28d4ea4fad9f57e19562, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  isInteracting: 0
   ScrollModifier: 0.1
   MinDistance: 0
-  MaxDistance: 0.7
+  MaxDistance: 1.5
 --- !u!65 &5570631255004692538
 BoxCollider:
   m_ObjectHideFlags: 0
