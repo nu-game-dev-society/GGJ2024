@@ -598,9 +598,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1847537866117364799}
     m_Modifications:
+    - target: {fileID: 75300772547665377, guid: 663bb67579ff0e245a128ad34abe531b, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 5663798039046766427, guid: 4d938249b24b0d54e82466f1d8349d0f, type: 2}
+    - target: {fileID: 75300772547665377, guid: 663bb67579ff0e245a128ad34abe531b, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4399887778203745538, guid: 663bb67579ff0e245a128ad34abe531b, type: 3}
       propertyPath: m_Name
       value: PausePlayMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399887778203745538, guid: 663bb67579ff0e245a128ad34abe531b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4802176065917384635, guid: 663bb67579ff0e245a128ad34abe531b, type: 3}
       propertyPath: m_Pivot.x
