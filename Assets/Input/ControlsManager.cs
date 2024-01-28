@@ -24,4 +24,9 @@ public class ControlsManager : MonoBehaviour
     {
         return controls.Gameplay.Look.ReadValue<Vector2>() * mouseSensitivity;
     }
+
+    public Vector2 GetScroll()
+    {
+        return controls.Gameplay.Scroll.ReadValue<Vector2>();
+    }
 }

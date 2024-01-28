@@ -16,4 +16,8 @@ public class HookADuckPoleInteractionComponent : MonoBehaviour, IInteractable
     }
 
     public bool ShouldHighlight() => !this.isInteracting;
+
+    public float ScrollModifier;
+    public float MinDistance;
+    public float MaxDistance;
 }
