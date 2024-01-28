@@ -229,6 +229,9 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 934942055672591665, guid: bdfb92e006bc5ba4bbfe5d437f64d1d9, type: 3}
+    - {fileID: 5221705676725270575, guid: bdfb92e006bc5ba4bbfe5d437f64d1d9, type: 3}
+    - {fileID: 8040522567385530260, guid: bdfb92e006bc5ba4bbfe5d437f64d1d9, type: 3}
+    - {fileID: 6228066475390626294, guid: bdfb92e006bc5ba4bbfe5d437f64d1d9, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1784309029984880730, guid: bdfb92e006bc5ba4bbfe5d437f64d1d9, type: 3}
@@ -677,7 +680,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactText: {fileID: 1359135656}
   ticketGUI: {fileID: 0}
-  ticketText: {fileID: 0}
+  ticketCollectText: {fileID: 0}
+  ticketCountText: {fileID: 0}
 --- !u!114 &1440993233
 MonoBehaviour:
   m_ObjectHideFlags: 0

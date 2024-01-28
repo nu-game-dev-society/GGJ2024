@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class HookADuckPoleHookComponent : MonoBehaviour
 {
+    public Transform hookTransform;
+
     [SerializeField]
     private float timeToAcquireTarget = 3.0f;
 
@@ -28,7 +30,7 @@ public class HookADuckPoleHookComponent : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.GetComponent<HookADuckDuckHookComponent>() is not HookADuckDuckHookComponent duckHookComponent)
+        if (!(other.gameObject.GetComponent<HookADuckDuckHookComponent>() is HookADuckDuckHookComponent duckHookComponent))
         {
             return;
         }
@@ -42,7 +44,7 @@ public class HookADuckPoleHookComponent : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.GetComponent<HookADuckDuckHookComponent>() is not HookADuckDuckHookComponent duckHookComponent)
+        if (!(other.gameObject.GetComponent<HookADuckDuckHookComponent>() is HookADuckDuckHookComponent duckHookComponent))
         {
             return;
         }
@@ -62,6 +64,6 @@ public class HookADuckPoleHookComponent : MonoBehaviour
     private void AcquireTarget(HookADuckDuckHookComponent targetToAcquire)
     {
         Debug.Log($"Acquired {targetToAcquire.gameObject.name}");
-        targetToAcquire.gameObject.transform.parent = this.gameObject.transform;
+        targetToAcquire.gameObject.GetComponentInParent<DuckComponent>().OnPickup(this);
     }
 }

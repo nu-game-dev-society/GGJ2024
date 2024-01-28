@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class DuckComponent : MonoBehaviour
 {
+    public Transform duckTransform;
+
     private readonly ComponentCache componentCache = new ComponentCache();
 
     void Start()
@@ -21,5 +23,14 @@ public class DuckComponent : MonoBehaviour
 
         this.componentCache.GetComponent<BobComponent>().ApplyBobAmountFuzz(fuzzAmount);
         this.componentCache.GetComponent<BobComponent>().ApplyBobSpeedFuzz(fuzzAmount);
+    }
+
+    public void OnPickup(HookADuckPoleHookComponent hookComponent)
+    {
+        this.duckTransform.parent = hookComponent.hookTransform;
+
+        this.componentCache.GetComponents<RotatorComponent>().ElementAt(0).enabled = false;
+        this.componentCache.GetComponents<RotatorComponent>().ElementAt(1).enabled = false;
+        this.componentCache.GetComponent<BobComponent>().enabled = false;
     }
 }
