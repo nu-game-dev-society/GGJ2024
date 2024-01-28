@@ -142,7 +142,6 @@ public class BasketballController : MonoBehaviour
 		{
 			basketballSplineAnimate.Container = splineCenter;
 			success = true;
-			Debug.Log("Success");
 		}
 		else
 		{
@@ -156,7 +155,6 @@ public class BasketballController : MonoBehaviour
 				basketballSplineAnimate.Container = right ? splineRight : splineLeft;
 			}
 			success = false;
-			Debug.Log("Failure!");
 		}
 
 		basketballSplineAnimate.Play();
