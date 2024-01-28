@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
             var h = FindObjectOfType<HudManager>();
             HudManager = h != null ? h : throw new System.Exception("Missing HUD");
         }
+
+        HudManager.DisplayTickets(TicketCount);
     }
     public void ReceiveTickets(int tickets)
     {
@@ -21,6 +23,7 @@ public class GameManager : MonoBehaviour
         //play sound;
 
         HudManager.ReceiveTickets(tickets);
+        HudManager.DisplayTickets(TicketCount);
         if (TicketCount <= 0)
         {
             Debug.LogWarning("YOU ARE A LOSER");

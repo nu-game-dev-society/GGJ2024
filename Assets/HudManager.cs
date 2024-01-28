@@ -6,10 +6,16 @@ using UnityEngine;
 public class HudManager : MonoBehaviour
 {
     private InteractionController interactionController;
+
+    [Header("Interaction")]
     public TextMeshProUGUI interactText;
 
+    [Header("Ticket popup")]
     public GameObject ticketGUI;
-    public TextMeshProUGUI ticketText;
+    public TextMeshProUGUI ticketCollectText;
+
+    [Header("Ticket display")]
+    public TextMeshProUGUI ticketCountText;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +30,12 @@ public class HudManager : MonoBehaviour
 
     public void ReceiveTickets(int tickets)
     {
-        ticketText.SetText(tickets < 0 ? $"You lost {Mathf.Abs(tickets)} tickets" : $"You won {tickets} tickets");
+        ticketCollectText.SetText(tickets < 0 ? $"You lost {Mathf.Abs(tickets)} tickets" : $"You won {tickets} tickets");
         ticketGUI.SetActive(true);
+    }
+
+    public void DisplayTickets(int tickets)
+    {
+        ticketCountText.SetText(tickets.ToString());
     }
 }
