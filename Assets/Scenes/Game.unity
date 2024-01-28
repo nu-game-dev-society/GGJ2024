@@ -2439,6 +2439,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3214274566995087289, guid: 43121534464534e4a80993e0538e780c, type: 3}
+      propertyPath: m_text
+      value: Resume
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2508,7 +2512,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 1930905512}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!114 &477336425 stripped
@@ -11979,6 +11983,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0003882437, y: 0.012155145, z: 0.007417703}
   m_Center: {x: -4.292815e-10, y: -0.00012207098, z: -0.002205582}
+--- !u!1 &1930905512 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4767726278705468544, guid: 43121534464534e4a80993e0538e780c, type: 3}
+  m_PrefabInstance: {fileID: 475105611}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1946326463
 PrefabInstance:
   m_ObjectHideFlags: 0
